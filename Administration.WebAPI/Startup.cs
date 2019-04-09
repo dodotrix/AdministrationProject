@@ -18,7 +18,6 @@ namespace Administration.WebAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            int x;
         }
 
         public IConfiguration Configuration { get; }
