@@ -18,6 +18,7 @@ namespace Administration.WebAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            int x;
         }
 
         public IConfiguration Configuration { get; }
@@ -35,11 +36,11 @@ namespace Administration.WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+            //else
+            //{
+            //    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            //    app.UseHsts();
+            //}
 
             app.UseHttpsRedirection();
             app.UseMvc();
