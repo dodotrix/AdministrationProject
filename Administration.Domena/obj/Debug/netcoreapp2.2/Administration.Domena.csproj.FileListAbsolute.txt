@@ -6,3 +6,4 @@ C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netco
 C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.AssemblyInfo.cs
 C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.dll
 C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.pdb
+C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.csprojAssemblyReference.cache
