@@ -1,9 +1,0 @@
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\bin\Debug\netcoreapp2.2\Administration.Domena.deps.json
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\bin\Debug\netcoreapp2.2\Administration.Domena.dll
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\bin\Debug\netcoreapp2.2\Administration.Domena.pdb
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.csprojAssemblyReference.cache
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.csproj.CoreCompileInputs.cache
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.AssemblyInfoInputs.cache
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.AssemblyInfo.cs
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.dll
-C:\Users\dodo_\source\repos\Administration\Administration.Domena\obj\Debug\netcoreapp2.2\Administration.Domena.pdb
