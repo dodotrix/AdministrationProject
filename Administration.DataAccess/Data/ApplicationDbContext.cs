@@ -8,11 +8,13 @@ namespace Administration.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions options) : base (options)
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
         }
 
         public DbSet<Pacijent> Pacijenti { get; set; }
+        public DbSet<Zahvat> Zahvati { get; set; }
+        public DbSet<PacijentZahvat> PacijentZahvati { get; set; }
     }
 }
