@@ -21,6 +21,7 @@ namespace Administration.Domena.Models
         public string Prezime { get; set; }
 
         [Required]
+        [Column(TypeName = "date")]
         public DateTime DatumRodjenja { get; set; }
 
         [Required]

@@ -1,6 +1,20 @@
-<h2>{{pacijent.punoIme}}</h2>
-<div><span>id: </span>{{pacijent.id}}</div>
 <div>
-  <label>Name: </label>
-  <input class="input-group form-control" [(ngModel)]="pacijent.ime" placeholder="ime"/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Ime i prezime</th>
+        <th scope="col">Datum rođenja</th>
+        <th scope="col">Telefon</th>
+        <th scope="col">Adresa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let pacijent of pacijenti'>
+        <td>{{pacijent.punoIme}}</td>
+        <td>{{pacijent.datumRodjenja | date : 'dd/MM/yyyy'}}</td>
+        <td>{{pacijent.telefon}}</td>
+        <td>{{pacijent.adresa}}</td>
+    </tr>
+    </tbody>
+  </table>
 </div>

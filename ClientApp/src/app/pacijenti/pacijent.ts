@@ -1,4 +1,4 @@
-export class Pacijent {
+export interface IPacijent {
     id: number;
     ime: string;
     prezime: string;

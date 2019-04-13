@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Pacijent } from '../shared/models/Pacijent';
+import { IPacijent } from './pacijent';
+import { PacijentService } from './pacijent.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-pacijenti',
@@ -8,20 +11,19 @@ import { Pacijent } from '../shared/models/Pacijent';
 })
 export class PacijentiComponent implements OnInit {
 
-  pacijent: Pacijent = {
-    id: 1,
-    ime: 'Dominik',
-    prezime: 'Blazic',
-    datumRodjenja: '29.01.1995',
-    telefon: '01234567',
-    adresa: 'Humboldtova 16',
-    punoIme: 'Dominik Blazic'
+  pacijenti: IPacijent[] = []; 
+
+
+  constructor(private pacijentService: PacijentService) { }
+
+  public getPacijenti(): void {
+    this.pacijentService.getPacijenti().subscribe(res => {
+      this.pacijenti = res;
+    });
   }
 
-
-  constructor() { }
-
   ngOnInit() {
+    this.getPacijenti();
   }
 
 }
