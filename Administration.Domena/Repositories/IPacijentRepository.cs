@@ -9,5 +9,6 @@ namespace Administration.Domena.Repositories
     public interface IPacijentRepository
     {
         Task<IEnumerable<Pacijent>> ListAsync();
+        Task<Pacijent> GetByIdAsync(int id);
     }
 }

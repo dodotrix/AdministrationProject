@@ -16,10 +16,14 @@ namespace Administration.Domena.Services
             _pacijentRepository = pacijentRepository;
         }
 
+        public async Task<Pacijent> GetByIdAsync(int id)
+        {
+            return await _pacijentRepository.GetByIdAsync(id);
+        }
+
         public async Task<IEnumerable<Pacijent>> ListAsync()
         {
             return await _pacijentRepository.ListAsync();
-            
         }
     }
 }

@@ -24,5 +24,12 @@ namespace Administration.WebAPI.Controllers
             var pacijenti = await _pacijentService.ListAsync();
             return pacijenti;
         }
+
+        [HttpGet("{id}")]
+        public async Task<Pacijent> GetById(int id)
+        {
+            var pacijent = await _pacijentService.GetByIdAsync(id);
+            return pacijent;
+        }
     }
 }

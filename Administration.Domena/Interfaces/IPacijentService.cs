@@ -9,5 +9,6 @@ namespace Administration.Domena.Services
     public interface IPacijentService
     {
         Task<IEnumerable<Pacijent>> ListAsync();
+        Task<Pacijent> GetByIdAsync(int id);
     }
 }
