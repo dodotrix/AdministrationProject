@@ -13,13 +13,15 @@ import { IPacijent } from '../pacijent';
 export class PacijentDetailComponent implements OnInit {
 
   pacijent: IPacijent;
+  errorMessage: string;
 
   constructor(private pacijentService: PacijentService, private route: ActivatedRoute) { }
 
   public getPacijentById(id: number): void {
-    this.pacijentService.getPacijentById(id).subscribe(res => {
-      this.pacijent = res;
-    })
+    this.pacijentService.getPacijentById(id).subscribe(
+      res => this.pacijent = res,
+      error => this.errorMessage = <any>error
+    );
   }
 
   ngOnInit() {

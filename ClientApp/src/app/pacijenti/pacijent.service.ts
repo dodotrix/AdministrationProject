@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IPacijent } from './pacijent';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from "rxjs";
+import { catchError, tap} from "rxjs/operators";
 
 
 @Injectable({
@@ -10,7 +11,6 @@ import { Observable } from 'rxjs';
 export class PacijentService {
   private apiURL: string = 'https://localhost:44395/api/pacijent';
 
-
   constructor(private http: HttpClient) { }
 
   public getPacijenti(): Observable<IPacijent[]>{
@@ -18,7 +18,21 @@ export class PacijentService {
   }
 
   public getPacijentById(id: number): Observable<IPacijent>{
-    return this.http.get<IPacijent>(`${this.apiURL}/` + id);
+    return this.http.get<IPacijent>(`${this.apiURL}/` + id).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  private handleError(err: HttpErrorResponse){
+    let errorMessage = '';
+    if(err.error instanceof ErrorEvent){
+      errorMessage = `An error occured:  ${err.error.message}`;
+    }  else {
+      errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
+    }
+
+    console.error(errorMessage);
+    return throwError(errorMessage);
   }
 
 }

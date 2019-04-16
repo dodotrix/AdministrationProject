@@ -26,9 +26,11 @@ namespace Administration.WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<Pacijent> GetById(int id)
+        public async Task<ActionResult<Pacijent>> GetById(int id)
         {
             var pacijent = await _pacijentService.GetByIdAsync(id);
+            if (pacijent == null)
+                return NoContent();
             return pacijent;
         }
     }
