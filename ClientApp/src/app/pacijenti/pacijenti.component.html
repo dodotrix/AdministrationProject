@@ -1,20 +1,26 @@
-<div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Ime i prezime</th>
-        <th scope="col">Datum rođenja</th>
-        <th scope="col">Telefon</th>
-        <th scope="col">Adresa</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor='let pacijent of pacijenti'>
-        <td>{{pacijent.punoIme}}</td>
-        <td>{{pacijent.datumRodjenja | date : 'dd/MM/yyyy'}}</td>
-        <td>{{pacijent.telefon}}</td>
-        <td>{{pacijent.adresa}}</td>
-    </tr>
-    </tbody>
-  </table>
+<div class="container">
+    <div class="jumbotron">
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Ime i prezime</th>
+              <th scope="col">Datum rođenja</th>
+              <th scope="col">Telefon</th>
+              <th scope="col">Adresa</th>
+              <th scope="col">Detalji</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let pacijent of pacijenti'>
+              <td>{{pacijent.punoIme}}</td>
+              <td>{{pacijent.datumRodjenja | date : 'dd/MM/yyyy'}}</td>
+              <td>{{pacijent.telefon}}</td>
+              <td>{{pacijent.adresa}}</td>
+              <td><a [routerLink]="['/pacijent', pacijent.id]">Detalji</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 </div>

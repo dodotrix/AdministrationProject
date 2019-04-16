@@ -8,13 +8,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PacijentService {
-  private apiURL: string = 'https://localhost:44395/api/';
+  private apiURL: string = 'https://localhost:44395/api/pacijent';
 
 
   constructor(private http: HttpClient) { }
 
   public getPacijenti(): Observable<IPacijent[]>{
-    return this.http.get<IPacijent[]>(`${this.apiURL}pacijent`);
+    return this.http.get<IPacijent[]>(`${this.apiURL}`);
+  }
+
+  public getPacijentById(id: number): Observable<IPacijent>{
+    return this.http.get<IPacijent>(`${this.apiURL}/` + id);
   }
 
 }

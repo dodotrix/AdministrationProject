@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="well well-sm">
+                        <h2><i class="fas fa-user"></i> {{pacijent.punoIme}}</h2>
+                        <br/>
+                        <div class="row">
+                          <div class="col">
+                            <h5><i class="fas fa-phone"></i> Telefon: </h5>
+                          </div>
+                          <div class="col">
+                           <h5>{{pacijent.telefon}}</h5>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                              <h5><i class="fas fa-calendar-day"></i> Datum rođenja: </h5>
+                            </div>
+                            <div class="col">
+                                <h5>{{pacijent.datumRodjenja | date : 'dd/MM/yyyy'}}</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                              <h5><i class="fas fa-map-marker-alt"></i> Adresa: </h5>
+                          </div>
+                          <div class="col">
+                              <h5>{{pacijent.adresa}}</h5>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
