@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="pacijent != null; else elseBlock">
     <div class="jumbotron">
         <div class="container">
             <div class="row">
@@ -36,4 +36,18 @@
         </div>
     </div>
 </div>
-{{errorMessage}}
+<ng-template #elseBlock>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Pacijent with this ID doesn't exist!</h1>
+            <hr class="my-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="">Home</a></li>
+                    <li class="breadcrumb-item"><a [routerLink]="['/pacijenti']" routerLinkActive="active">Pacijenti</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">404</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</ng-template>
