@@ -33,5 +33,13 @@ namespace Administration.WebAPI.Controllers
                 return NoContent();
             return pacijent;
         }
+
+        [HttpPost("{addPacijent}")]
+        public async Task<IActionResult> AddPacijent([FromBody] Pacijent pacijent)
+        {
+            await _pacijentService.AddPacijent(pacijent);
+            return Ok();
+        }
+
     }
 }

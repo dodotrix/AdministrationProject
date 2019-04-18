@@ -17,13 +17,18 @@ namespace Administration.DataAccess.Repositories
 
         public async Task<Pacijent> GetByIdAsync(int id)
         {
-            var a = await _context.Pacijenti.FindAsync(id);
-            return a;
+            return await _context.Pacijenti.FindAsync(id);
         }
 
         public async Task<IEnumerable<Pacijent>> ListAsync()
         {
             return await _context.Pacijenti.ToListAsync();
+        }
+
+        public async Task AddPacijent(Pacijent pacijent)
+        {
+            _context.Pacijenti.Add(pacijent);
+            await _context.SaveChangesAsync();
         }
     }
 }

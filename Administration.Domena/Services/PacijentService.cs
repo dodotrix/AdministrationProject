@@ -16,6 +16,11 @@ namespace Administration.Domena.Services
             _pacijentRepository = pacijentRepository;
         }
 
+        public async Task AddPacijent(Pacijent pacijent)
+        {
+            await _pacijentRepository.AddPacijent(pacijent);
+        }
+
         public async Task<Pacijent> GetByIdAsync(int id)
         {
             return await _pacijentRepository.GetByIdAsync(id);
@@ -25,5 +30,7 @@ namespace Administration.Domena.Services
         {
             return await _pacijentRepository.ListAsync();
         }
+
+        
     }
 }
