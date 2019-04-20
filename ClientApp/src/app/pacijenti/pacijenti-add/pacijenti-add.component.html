@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Dodaj novog pacijenta</h1>
+  <form (ngSubmit)="onFormSubmit()" #pacijentAddForm='ngForm'>
+    <div class="form-group">
+      <label for="name">Ime: </label>
+      <input type="text" class="form-control" id="pacijentIme" required #spy>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Prezime: </label>
+      <input type="text" class="form-control" id="pacijentPrezime" required #spy>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Datum rođenja: </label>
+      <input type="date" class="form-control" id="datumRodenja" required #spy>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Telefon: </label>
+      <input type="text" class="form-control" id="pacijentTelefon" required #spy>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Adresa: </label>
+      <input type="text" class="form-control" id="pacijentAdresa" required #spy>
+    </div>
+
+    <button type="submit" class="btn btn-default">Novi pacijent</button>
+
+  </form>
+</div>

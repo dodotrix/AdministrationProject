@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { IPacijent } from './pacijent';
 import { Observable, throwError } from "rxjs";
 import { catchError, tap} from "rxjs/operators";
 
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
+};
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +22,13 @@ export class PacijentService {
 
   public getPacijentById(id: number): Observable<IPacijent>{
     return this.http.get<IPacijent>(`${this.apiURL}/` + id).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  public addPacijent(pacijent): Observable<IPacijent> {
+    return this.http.post<IPacijent>(`${this.apiURL}/add`, pacijent, httpOptions).pipe(
+      tap((pacijent: IPacijent) => console.log('added pacijent')),
       catchError(this.handleError)
     );
   }
