@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { PacijentService } from '../pacijent.service';
-import { IPacijent } from '../pacijent';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { IPacijent } from '../pacijent';
 })
 export class PacijentiAddComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private api: PacijentService, private formBuilder: FormBuilder) { }
+  constructor(private api: PacijentService, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
 
   pacijentForm: FormGroup;
   pacijentIme: string = '';
