@@ -26,9 +26,8 @@ export class PacijentService {
     );
   }
 
-  public addPacijent(pacijent): Observable<IPacijent> {
-    return this.http.post<IPacijent>(`${this.apiURL}/add`, pacijent, httpOptions).pipe(
-      tap((pacijent: IPacijent) => console.log('added pacijent')),
+  public addPacijent(pacijent: IPacijent): Observable<IPacijent> {
+    return this.http.post<IPacijent>(`${this.apiURL}/addPacijent`, pacijent, httpOptions).pipe(
       catchError(this.handleError)
     );
   }
