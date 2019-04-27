@@ -17,11 +17,11 @@ export class PacijentiAddComponent implements OnInit {
 
   ngOnInit() {
     this.pacijentForm = this.formBuilder.group({
-      pacijentIme : ['', Validators.required],
-      pacijentPrezime : ['', Validators.required],
-      pacijentDatum : ['', Validators.required],
-      pacijentTelefon : ['', Validators.required],
-      pacijentAdresa : ['', Validators.required]
+      ime : ['', Validators.required],
+      prezime : ['', Validators.required],
+      datumRodjenja : ['', Validators.required],
+      telefon : ['', Validators.required],
+      adresa : ['', Validators.required]
     })
   }
 

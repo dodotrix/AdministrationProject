@@ -5,27 +5,27 @@
   <form (ngSubmit)="onFormSubmit()" [formGroup]="pacijentForm">
     <div class="form-group">
       <label for="ime">Ime: </label>
-      <input type="text" class="form-control" id="pacijentIme" formControlName='pacijentIme' required #spy>
+      <input type="text" class="form-control" id="ime" formControlName='ime' required #spy>
     </div>
 
     <div class="form-group">
       <label for="prezime">Prezime: </label>
-      <input type="text" class="form-control" id="pacijentPrezime" formControlName='pacijentPrezime' required #spy>
+      <input type="text" class="form-control" id="prezime" formControlName='prezime' required #spy>
     </div>
 
     <div class="form-group">
       <label for="datumRodenja">Datum rođenja: </label>
-      <input type="date" class="form-control" id="datumRodenja" formControlName='pacijentDatum' required #spy>
+      <input type="date" class="form-control" id="datumRodjenja" formControlName='datumRodjenja' required #spy>
     </div>
 
     <div class="form-group">
       <label for="telefon">Telefon: </label>
-      <input type="text" class="form-control" id="pacijentTelefon" formControlName='pacijentTelefon' required #spy>
+      <input type="text" class="form-control" id="telefon" formControlName='telefon' required #spy>
     </div>
 
     <div class="form-group">
       <label for="adresa">Adresa: </label>
-      <input type="text" class="form-control" id="pacijentAdresa" formControlName='pacijentAdresa' required #spy>
+      <input type="text" class="form-control" id="adresa" formControlName='adresa' required #spy>
     </div>
 
     <button type="submit" class="btn btn-primary" >Dodaj</button>
