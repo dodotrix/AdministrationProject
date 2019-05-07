@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Administration.WebAPI.Controllers
 {
+    [ApiController]
     [Route("/api/[controller]")]
     public class PacijentController : Controller
     {
@@ -35,7 +36,7 @@ namespace Administration.WebAPI.Controllers
         }
 
         [HttpPost("addPacijent")]
-        public async Task<IActionResult> AddPacijent([FromBody] Pacijent pacijent)
+        public async Task<IActionResult> AddPacijent(Pacijent pacijent)
         {
             await _pacijentService.AddPacijent(pacijent);
             return Ok();
