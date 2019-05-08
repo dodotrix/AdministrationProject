@@ -14,6 +14,7 @@ export class PacijentiAddComponent implements OnInit {
   constructor(private api: PacijentService, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
 
   pacijentForm: FormGroup;
+  showMsg: boolean = false;
 
   ngOnInit() {
     this.pacijentForm = this.formBuilder.group({
@@ -26,10 +27,14 @@ export class PacijentiAddComponent implements OnInit {
   }
 
   onFormSubmit() {
-    this.api.addPacijent(this.pacijentForm.value).subscribe(res => {
-    }, (err) => {
-      console.log(err);
-    });
+    if(this.pacijentForm.valid){
+      this.api.addPacijent(this.pacijentForm.value).subscribe(res => {
+        this.showMsg = true;
+        this.pacijentForm.reset();
+      }, (err) => {
+        console.log(err);
+      });
+    }
   }
 
 

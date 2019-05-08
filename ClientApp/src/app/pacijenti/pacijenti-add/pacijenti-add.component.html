@@ -29,6 +29,13 @@
     </div>
 
     <button type="submit" class="btn btn-primary" >Dodaj</button>
-
   </form>
+  <br/>
+  <div class="row" *ngIf="showMsg">
+    <div class="col-xs-12">
+      <p class="alert alert-success">
+          <strong>Pacijent uspješno dodan!</strong>
+      </p>
+    </div>
+  </div>
 </div>
