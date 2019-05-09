@@ -4,38 +4,34 @@
 
   <form (ngSubmit)="onFormSubmit()" [formGroup]="pacijentForm">
     <div class="form-group">
-      <label for="ime">Ime: </label>
-      <input type="text" class="form-control" id="ime" formControlName='ime' required #spy>
+      <input type="text" class="form-control col-md-5" id="ime" formControlName='ime' placeholder='Ime' required #spy>
     </div>
 
     <div class="form-group">
-      <label for="prezime">Prezime: </label>
-      <input type="text" class="form-control" id="prezime" formControlName='prezime' required #spy>
+      <input type="text" class="form-control col-md-5" id="prezime" formControlName='prezime' placeholder='Prezime' required #spy>
     </div>
 
     <div class="form-group">
-      <label for="datumRodenja">Datum rođenja: </label>
-      <input type="date" class="form-control" id="datumRodjenja" formControlName='datumRodjenja' required #spy>
+      <input type="date" class="form-control col-md-5" id="datumRodjenja" formControlName='datumRodjenja' placeholder='Datum rođenja' required #spy>
     </div>
 
     <div class="form-group">
-      <label for="telefon">Telefon: </label>
-      <input type="text" class="form-control" id="telefon" formControlName='telefon' required #spy>
+      <input type="text" class="form-control col-md-5" id="telefon" formControlName='telefon' placeholder="Telefon" required #spy>
     </div>
 
     <div class="form-group">
-      <label for="adresa">Adresa: </label>
-      <input type="text" class="form-control" id="adresa" formControlName='adresa' required #spy>
+      <input type="text" class="form-control col-md-5" id="adresa" formControlName='adresa' placeholder="Adresa" required #spy>
     </div>
 
     <button type="submit" class="btn btn-primary" >Dodaj</button>
   </form>
   <br/>
-  <div class="row" *ngIf="showMsg">
-    <div class="col-xs-12">
-      <p class="alert alert-success">
+  <div class="row" *ngIf="showMsg" (click)="showMsg = false">
+      <div class="alert alert-success alert-dissmisible fade show col-md-12" role="alert">
           <strong>Pacijent uspješno dodan!</strong>
-      </p>
-    </div>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
   </div>
 </div>
