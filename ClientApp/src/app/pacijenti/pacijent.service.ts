@@ -32,10 +32,10 @@ export class PacijentService {
     );
   }
 
-  public removePacijent(id: number): Observable<IPacijent>{
-    return this.http.post<IPacijent>(`${this.apiURL}/` + id, id, httpOptions).pipe(
-      catchError(this.handleError)
-    )
+  public removePacijent(id: number): Observable<{}>{
+      return this.http.delete(`${this.apiURL}/` + id, httpOptions).pipe(
+        catchError(this.handleError)
+      )
   }
 
   private handleError(err: HttpErrorResponse){

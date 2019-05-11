@@ -42,5 +42,12 @@ namespace Administration.WebAPI.Controllers
             return Ok();
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> RemovePacijent(int id)
+        {
+            await _pacijentService.RemovePacijent(id);
+            return Ok();
+        }
+
     }
 }
