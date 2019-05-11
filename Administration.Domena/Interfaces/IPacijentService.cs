@@ -11,5 +11,6 @@ namespace Administration.Domena.Services
         Task<IEnumerable<Pacijent>> ListAsync();
         Task<Pacijent> GetByIdAsync(int id);
         Task AddPacijent(Pacijent pacijent);
+        Task RemovePacijent(int id);
     }
 }

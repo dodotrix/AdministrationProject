@@ -31,6 +31,11 @@ namespace Administration.Domena.Services
             return await _pacijentRepository.ListAsync();
         }
 
+        public async Task RemovePacijent(int id)
+        {
+            await _pacijentRepository.RemovePacijent(id);
+        }
+
         
     }
 }

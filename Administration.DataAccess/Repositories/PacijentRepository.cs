@@ -30,5 +30,12 @@ namespace Administration.DataAccess.Repositories
             _context.Pacijenti.Add(pacijent);
             await _context.SaveChangesAsync();
         }
+
+        public async Task RemovePacijent(int id)
+        {
+            var pacijent = await _context.Pacijenti.FindAsync(id);
+            _context.Pacijenti.Remove(pacijent);
+            await _context.SaveChangesAsync();
+        }
     }
 }

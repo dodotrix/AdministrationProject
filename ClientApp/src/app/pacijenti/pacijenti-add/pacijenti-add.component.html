@@ -4,26 +4,33 @@
 
   <form (ngSubmit)="onFormSubmit()" [formGroup]="pacijentForm">
     <div class="form-group">
-      <input type="text" class="form-control col-md-5" id="ime" formControlName='ime' placeholder='Ime' required #spy>
+        <label for="ime"><strong>Ime:</strong></label>
+      <input type="text" class="form-control col-md-5" id="ime" formControlName='ime' required #spy>
     </div>
 
     <div class="form-group">
-      <input type="text" class="form-control col-md-5" id="prezime" formControlName='prezime' placeholder='Prezime' required #spy>
+        <label for="prezime"><strong>Prezime:</strong></label>
+      <input type="text" class="form-control col-md-5" id="prezime" formControlName='prezime' required #spy>
     </div>
 
     <div class="form-group">
-      <input type="date" class="form-control col-md-5" id="datumRodjenja" formControlName='datumRodjenja' placeholder='Datum rođenja' required #spy>
+        <label for="datumRodjenja"><strong>Datum rođenja:</strong></label>
+      <input type="date" class="form-control col-md-5" id="datumRodjenja" formControlName='datumRodjenja' required #spy>
     </div>
 
     <div class="form-group">
-      <input type="text" class="form-control col-md-5" id="telefon" formControlName='telefon' placeholder="Telefon" required #spy>
+        <label for="telefon"><strong>Telefon:</strong></label>
+      <input type="text" class="form-control col-md-5" id="telefon" formControlName='telefon' required #spy>
     </div>
 
     <div class="form-group">
-      <input type="text" class="form-control col-md-5" id="adresa" formControlName='adresa' placeholder="Adresa" required #spy>
+        <label for="adresa"><strong>Adresa:</strong></label>
+      <input type="text" class="form-control col-md-5" id="adresa" formControlName='adresa' required #spy>
     </div>
-
-    <button type="submit" class="btn btn-primary" >Dodaj</button>
+    <div class="row">
+      <button type="submit" class="btn btn-primary" >Dodaj</button>
+      <a class="col-md-2" [routerLink]="['/pacijenti']">Cancel</a>
+    </div>
   </form>
   <br/>
   <div class="row" *ngIf="showMsg" (click)="showMsg = false">

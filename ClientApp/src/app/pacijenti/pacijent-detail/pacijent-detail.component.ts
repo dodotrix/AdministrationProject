@@ -24,6 +24,13 @@ export class PacijentDetailComponent implements OnInit {
     );
   }
 
+  public removePacijent(id: number): void{
+    this.pacijentService.removePacijent(id).subscribe(
+      res => this.pacijent = res,
+      error => this.errorMessage = <any>error
+    );
+  }
+
   ngOnInit() {
     this.getPacijentById(this.route.snapshot.params.id);
   }
