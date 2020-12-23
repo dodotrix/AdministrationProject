@@ -1,6 +1,6 @@
 # Dental office administration app
 
-This was a learning project in which I wanted to get familiar with technologies liste below. 
+This was a learning project in which I wanted to get familiar with technologies listed below. 
 
 # Technologies
 
