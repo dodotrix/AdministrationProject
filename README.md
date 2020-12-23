@@ -1,6 +1,6 @@
 # Dental office administration app
 
-This will be a learning/having fun project in which I will try to get the most out of some new technologies that I want to get familiar with. For a start I will create a basic CRUD application and then start to implement various things I will find interesting and useful for this type of app.
+This was a learning project in which I wanted to get familiar with technologies liste below. 
 
 # Technologies
 
